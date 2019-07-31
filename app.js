@@ -1,5 +1,6 @@
 var express = require("express");
 var app = express();
+var request = require("request")
 
 app.set("view engine", "ejs");
 app.get("/", function (req, res) {
@@ -7,7 +8,16 @@ app.get("/", function (req, res) {
 })
 
 app.get("/imdb", function (req, res) {
-    res.send("This is the landing page")
+    var search = req.query.search;
+    if (search) {
+        request("http://www.omdbapi.com/?s=" + search + "&apikey=5e74b332", function (err, response, body) {
+            if (!err && response.statusCode === 200) {
+                var parsedData = JSON.parse(body);
+                console.log(parsedData)
+            }
+        })
+    }
+    res.render("index")
 })
 
 app.get("/show", function (req, res) {
