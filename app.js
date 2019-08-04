@@ -15,6 +15,7 @@ app.get("/imdb", function (req, res) {
         request("http://www.omdbapi.com/?s=" + search + "&apikey=5e74b332", function (err, response, body) {
             if (!err && response.statusCode === 200) {
                 var parsedData = JSON.parse(body);
+                // console.log(typeof parsedData.Search[0].Poster)
                 res.render("index", { imdb: parsedData })
             }
         })

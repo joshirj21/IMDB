@@ -18,7 +18,10 @@ body{
 .form-control + button{
     display: none;
 }
-
+.image-height{
+    height: 300px;
+    width: 300px;
+}
 /* .form-control:focus{
     border:1px solid #c3073f;//blue color of the input is not changing to the color desired
     box-shadow: #000000;
