@@ -3,7 +3,7 @@
     <%for(var i=0;i<imdb.Search.length;i++){%>
     <%if(imdb.Search[i].Poster !== "N/A"){%>
     <div class="col-lg-4 mb-5">
-        <img class="img-fluid img-thumbnail image-height" src="<%= imdb.Search[i].Poster %>" alt="">
+        <a href="#"><img class="img-fluid img-thumbnail image-height" src="<%= imdb.Search[i].Poster %>" alt=""></a>
     </div>
     <%} else{continue;}%>
     <%}%>

@@ -22,6 +22,11 @@ body{
     height: 300px;
     width: 300px;
 }
+.img-thumbnail:hover{
+    background-color: #c3073f;
+    border: 1px solid #c3073f;
+    transition: all 200ms;
+}
 /* .form-control:focus{
     border:1px solid #c3073f;//blue color of the input is not changing to the color desired
     box-shadow: #000000;
