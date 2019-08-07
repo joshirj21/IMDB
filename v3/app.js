@@ -2,15 +2,27 @@ var express = require("express");
 var app = express();
 var request = require("request")
 var mongoose = require("mongoose");
+var idmodel = require("./models/ID")
+var user = require("./models/user")
+var passport = require("passport")
+var localStrategy = require("passport-local")
+var bodyParser = require("body-parser")
 
-mongoose.connect('mongodb://localhost:27017/imdbApp_v2', { useNewUrlParser: true });
+mongoose.connect('mongodb://localhost:27017/imdbApp_v3', { useNewUrlParser: true });
 
-var schema = new mongoose.Schema({
-    id: {},                         //storing imdb object
-    idStr: String                   //String imdbID to avoid creating same id again
-})
+app.use(require("express-session")({
+    secret: "i want to get laid",
+    resave: false,
+    saveUninitialized: false
+}))
 
-var idmodel = mongoose.model("ID", schema);
+
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(passport.initialize())
+app.use(passport.session())
+passport.use(new localStrategy(user.authenticate()))
+passport.serializeUser(user.serializeUser())
+passport.deserializeUser(user.deserializeUser())
 
 app.set("view engine", "ejs");
 app.use(express.static('public'))
@@ -69,6 +81,33 @@ app.get("/imdb/:id", function (req, res) {
 
 app.get("/show", function (req, res) {
     res.send("This is the show route")
+})
+
+app.get("/register", function (req, res) {
+    res.render("register")
+})
+
+app.post("/register", function (req, res) {
+    user.register(new user({ username: req.body.username }), req.body.password, function (err, user) {
+        if (err) {
+            console.log(err)
+        }
+        else {
+            passport.authenticate("local")(req, res, function () {
+                res.redirect("/")
+            })
+        }
+    })
+})
+
+app.get("/login", function (req, res) {
+    res.render("login")
+})
+
+app.post("/login", passport.authenticate("local", {
+    successRedirect: "/",
+    failureRedirect: "/login"
+}), function (req, res) {
 })
 
 app.listen(5000, function (err) {
