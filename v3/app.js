@@ -110,6 +110,10 @@ app.post("/login", passport.authenticate("local", {
 }), function (req, res) {
 })
 
+app.get("/logout", function (req, res) {
+    delete req._passport.session.user;
+    res.redirect("/")
+})
 app.listen(5000, function (err) {
     if (err) {
         console.log(err)
