@@ -100,8 +100,8 @@ app.post("/imdb/:id/comment", function (req, res) {
                     console.log(err)
                 }
                 else {
-                    // created.author = req.user._id;
-                    // created.save();
+                    created.author = req.user._id;
+                    created.save();
                     found.rating.push(created._id);
                     found.save();
                     console.log(found)
