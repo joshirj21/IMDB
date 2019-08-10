@@ -1,9 +1,30 @@
 <% include ./partials/header %>
-<div class="mt-5">
-    <form class="form-group" action="/imdb" method="GET">
-        <input class="form-control form-control-lg" type="text" name="search" placeholder="Search movie title">
-        <button>Submit</button>
+<div class="mt-3 mb-4">
+    <form class="form-group" action="/imdb" method="GET" style="width: 800px;margin:0 auto;">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Enter Movie or series title" style="height: 50px;">
+            <div class="input-group-append">
+                <button class="input-group-text text-center px-5" id="basic-addon2"><i
+                        class="fas fa-search"></i></button>
+            </div>
+        </div>
     </form>
 </div>
+
+<div class="row">
+    <% for(var i=0;i<12;i++){ %>
+    <div class="col-lg-6">
+        <div class="poster">
+            <img class="img-responsive rounded "
+                src="https://image.tmdb.org/t/p/w500<%= movies.results[i].backdrop_path %>" alt="">
+        </div>
+        <!-- <div class="card" style="width: 25rem;height: 25rem;">
+            
+        </div> -->
+    </div>
+    <% } %>
 </div>
+<!-- <div class="col-lg-3"></div>
+    <div class="col-lg-3"></div>
+    <div class="col-lg-3"></div> -->
 <% include ./partials/footer %>

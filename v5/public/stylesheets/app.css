@@ -33,3 +33,23 @@ letter-spacing: 0.1rem;
 .navbar-brand:hover{
     color: #abb7c4;
 }
+.input-group-text{
+    background: #233A50;
+    border: 1px solid #233A50;
+}
+.fa-search{
+    color: white;
+}
+.poster{
+    width: 45%;
+    margin: 1.66%;
+    height: 300px; 
+}
+/* .input-group:focus{
+    outline: none;
+    border: none;
+}
+.input-group:hover{
+    outline: none;
+    border: none;
+} */

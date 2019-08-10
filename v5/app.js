@@ -29,7 +29,12 @@ app.set("view engine", "ejs");
 app.use(express.static('public'))
 
 app.get("/", function (req, res) {
-    res.render("index1");
+    request("https://api.themoviedb.org/3/movie/now_playing?api_key=f87808dca030deeb9f8c0b0389f1278a&language=en-US&page=1", function (err, response, body) {
+        if (!err && response.statusCode === 200) {
+            var parsedData = JSON.parse(body);
+            res.render("index1", { movies: parsedData })
+        }
+    })
 })
 
 app.get("/imdb", function (req, res) {
