@@ -1,5 +1,5 @@
 <% include ./partials/header %>
-<div class="mt-3 mb-4">
+<div class="mt-3 searchBar">
     <form class="form-group" action="/imdb" method="GET" style="width: 800px;margin:0 auto;">
         <div class="input-group mb-3">
             <input type="text" class="form-control" placeholder="Enter Movie or series title" style="height: 50px;">
@@ -11,17 +11,13 @@
     </form>
 </div>
 
-<div class="row">
+<div class="row mt-4">
     <% for(var i=0;i<4;i++){ %>
-    <div class="col-lg-3 px-1">
-        <img class="img-fluid rounded" src="https://image.tmdb.org/t/p/w500<%= movies.results[i].poster_path %>" alt="">
-        <!-- <div class="card" style="width: 25rem;height: 25rem;">
-            
-        </div> -->
+    <div class="zoomin col-lg-3 px-3">
+        <img class="img-fluid rounded thumbnail"
+            src="https://image.tmdb.org/t/p/w500<%= movies.results[i].poster_path %>" alt="">
     </div>
     <% } %>
 </div>
-<!-- <div class="col-lg-3"></div>
-    <div class="col-lg-3"></div>
-    <div class="col-lg-3"></div> -->
+</div>
 <% include ./partials/footer %>

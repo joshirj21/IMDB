@@ -1,3 +1,4 @@
+
 .middle-nav{
     margin-left: 30px;
     margin-right: 150px;
@@ -7,8 +8,8 @@
 }
 .bg{
     background-image: url("https://haintheme.com/demo/html/bustter/images/uploads/slider-bg.jpg");
-    width: 1349px;
-    height: 784px;
+    width: 1495px;
+    height: 1000px;
     background-position: center;
 }
 .nav-link{
@@ -40,7 +41,31 @@ letter-spacing: 0.1rem;
 .fa-search{
     color: white;
 }
+.zoomin{
+    transition: transform .3s;
 
+}
+.zoomin:hover{
+    transform: scale(1.17);
+}
+.searchBar{
+    margin-bottom: 100px;
+}
+.info{
+    display: block;
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 50%, rgb(0, 0, 0) 100%);
+    z-index: 999;
+}
+/* .thumbnail:hover {
+    position:relative;
+    top:-25px;
+    bottom:-25px;
+    left:0px;
+    width:500px;
+    height:auto;
+    display:block;
+    z-index:999;
+} */
 /* .input-group:focus{
     outline: none;
     border: none;
