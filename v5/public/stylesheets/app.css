@@ -1,6 +1,35 @@
 .middle-nav{
-    margin: 0 auto;
+    margin-left: 30px;
+    margin-right: 150px;
 }
 .dropdown-menu{
     border: none;
+}
+.bg{
+    background-image: url("https://haintheme.com/demo/html/bustter/images/uploads/slider-bg.jpg");
+    width: 1349px;
+    height: 784px;
+    background-position: center;
+}
+.nav-link{
+    color:#abb7c4;
+     font-family: 'Dosis', sans-serif;
+font-weight: 700;
+font-size: 15px;
+text-transform: uppercase;
+letter-spacing: 0.1rem;
+
+}
+.nav-link:hover{
+    color: #abb7c4;
+}
+.nav-item{
+    padding: 15px;
+}
+.navbar-brand{
+    color: #abb7c4;
+    font-size: 2rem;
+}
+.navbar-brand:hover{
+    color: #abb7c4;
 }
