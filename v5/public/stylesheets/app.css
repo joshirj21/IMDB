@@ -40,11 +40,7 @@ letter-spacing: 0.1rem;
 .fa-search{
     color: white;
 }
-.poster{
-    width: 45%;
-    margin: 1.66%;
-    height: 300px; 
-}
+
 /* .input-group:focus{
     outline: none;
     border: none;

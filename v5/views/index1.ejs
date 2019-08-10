@@ -12,12 +12,9 @@
 </div>
 
 <div class="row">
-    <% for(var i=0;i<12;i++){ %>
-    <div class="col-lg-6">
-        <div class="poster">
-            <img class="img-responsive rounded "
-                src="https://image.tmdb.org/t/p/w500<%= movies.results[i].backdrop_path %>" alt="">
-        </div>
+    <% for(var i=0;i<4;i++){ %>
+    <div class="col-lg-3 px-1">
+        <img class="img-fluid rounded" src="https://image.tmdb.org/t/p/w500<%= movies.results[i].poster_path %>" alt="">
         <!-- <div class="card" style="width: 25rem;height: 25rem;">
             
         </div> -->
