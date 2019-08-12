@@ -1,7 +1,9 @@
-
+body{
+    color: white;
+}
 .middle-nav{
     margin-left: 30px;
-    margin-right: 150px;
+    margin-right: 50px;
 }
 .dropdown-menu{
     border: none;
@@ -9,7 +11,7 @@
 .bg{
     background-image: url("https://haintheme.com/demo/html/bustter/images/uploads/slider-bg.jpg");
     width: 1495px;
-    height: 1000px;
+    height: 900px;
     background-position: center;
 }
 .nav-link{
@@ -43,7 +45,6 @@ letter-spacing: 0.1rem;
 }
 .zoomin{
     transition: transform .3s;
-
 }
 .zoomin:hover{
     transform: scale(1.17);
@@ -51,10 +52,18 @@ letter-spacing: 0.1rem;
 .searchBar{
     margin-bottom: 100px;
 }
-.info{
+/* .info{
     display: block;
     background-image: linear-gradient(rgba(0, 0, 0, 0) 50%, rgb(0, 0, 0) 100%);
     z-index: 999;
+} */
+.tag{
+    float:left;
+    position:absolute;
+    left: 0px;
+    top: 0px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 50%, rgb(0, 0, 0) 100%);
+    z-index: 1000;
 }
 /* .thumbnail:hover {
     position:relative;
@@ -74,3 +83,39 @@ letter-spacing: 0.1rem;
     outline: none;
     border: none;
 } */
+.middle-section{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background:  #020D18;
+}
+.middle-header{
+    color: white;
+    font-weight: 300;
+}
+
+hr.ruler { 
+    border: 0; 
+    height: 1px; 
+    background-image: -webkit-linear-gradient(left, rgb(42,11,53), #DD003F, rgb(42,11,53));
+    background-image: -moz-linear-gradient(left, rgb(42,11,53), #DD003F, rgb(42,11,53));
+    background-image: -ms-linear-gradient(left, rgb(42,11,53), #DD003F, rgb(42,11,53));
+    background-image: -o-linear-gradient(left, rgb(42,11,53), #DD003F, rgb(42,11,53)); 
+  }
+  .links{
+      margin-right: 50px;
+      color: white;
+      font-weight: 300;
+  }
+  .links:hover{
+      color: white;
+  }
+  .fas.fa-star{
+      color: #DD003F;
+  }
+  .movie-title {
+      font-weight: 300;
+  }
+  .lower-section{
+      background: #06121E;
+      height: 100px;
+  }

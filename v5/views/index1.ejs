@@ -13,11 +13,38 @@
 
 <div class="row mt-4">
     <% for(var i=0;i<4;i++){ %>
-    <div class="zoomin col-lg-3 px-3">
-        <img class="img-fluid rounded thumbnail"
+    <div class="col-lg-3 px-3">
+        <img class="zoomin img-fluid rounded thumbnail"
             src="https://image.tmdb.org/t/p/w500<%= movies.results[i].poster_path %>" alt="">
     </div>
     <% } %>
 </div>
+</div>
+<div class="middle-section">
+    <div class="container">
+        <h2 class="middle-header">Spotlight This Month</h2>
+        <hr class="ruler">
+        <p>
+            <span><a class="links" href="">Latest</a><a class="links" href="">Coming Soon</a><a class="links"
+                    href="">Top
+                    Rated</a><a class="links" href="">Recently
+                    Released</a></span>
+        </p>
+        <div class="row mt-5">
+            <% for(var i=0;i<4;i++){ %>
+            <div class="col-lg-3 px-3">
+                <img class="img-fluid rounded thumbnail"
+                    src="https://image.tmdb.org/t/p/w500<%= movies.results[i].poster_path %>" alt="">
+                <p class="pt-4"><i class="fas fa-star"></i>&nbsp&nbsp7/10</p>
+                <h5 class="movie-title"><%= movies.results[i].title %></h5>
+            </div>
+            <% } %>
+        </div>
+    </div>
+</div>
+<div class="lower-section">
+    <div class="container">
+        <!-- News api here -->
+    </div>
 </div>
 <% include ./partials/footer %>
