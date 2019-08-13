@@ -2,7 +2,8 @@
 <div class="mt-3 searchBar">
     <form class="form-group" action="/imdb" method="GET" style="width: 800px;margin:0 auto;">
         <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Enter Movie or series title" style="height: 50px;">
+            <input type="text" class="form-control" name="search" placeholder="Enter Movie or series title"
+                style="height: 50px;">
             <div class="input-group-append">
                 <button class="input-group-text text-center px-5" id="basic-addon2"><i
                         class="fas fa-search"></i></button>
@@ -17,6 +18,7 @@
 
         <img class="zoomin img-fluid rounded thumbnail"
             src="https://image.tmdb.org/t/p/w500<%= movies.results[i].poster_path %>" alt="">
+
     </div>
     <% } %>
 </div>

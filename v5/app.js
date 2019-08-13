@@ -40,7 +40,7 @@ app.get("/", function (req, res) {
 app.get("/imdb", function (req, res) {
     var search = req.query.search;
     if (search) {
-        request("http://www.omdbapi.com/?s=" + search + "&apikey=5e74b332", function (err, response, body) {
+        request("https://api.themoviedb.org/3/search/movie?api_key=f87808dca030deeb9f8c0b0389f1278a&language=en-US&query=" + search + "&page=1", function (err, response, body) {
             if (!err && response.statusCode === 200) {
                 var parsedData = JSON.parse(body);
                 res.render("index", { imdb: parsedData })
@@ -49,18 +49,18 @@ app.get("/imdb", function (req, res) {
     }
 })
 
-app.get("/create/:id", function (req, res) {
-    idmodel.findOne({ idStr: req.params.id }, function (err, found) {
+app.get("/create/:name", function (req, res) {
+    idmodel.findOne({ nameStr: req.params.name }, function (err, found) {
         // console.log(found)
         if (!found) {
-            request("http://www.omdbapi.com/?i=" + req.params.id + "&apikey=5e74b332", function (err, response, body) {
+            request("https://api.themoviedb.org/3/search/movie?api_key=f87808dca030deeb9f8c0b0389f1278a&language=en-US&query=" + req.params.name + "&page=1", function (err, response, body) {
                 var parsedData = JSON.parse(body);
-                idmodel.create({ id: parsedData }, function (err, created) {
+                idmodel.create({ id: parsedData.results[0] }, function (err, created) {
                     if (err) {
                         console.log(err)
                     }
                     else {
-                        created.idStr = created.id.imdbID;
+                        created.nameStr = created.id.original_title;
                         created.save();
                         res.redirect("/imdb/" + created._id)
                     }
