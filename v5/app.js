@@ -49,7 +49,7 @@ app.get("/imdb", function (req, res) {
     }
 })
 
-app.get("/create/:name", function (req, res) {
+app.get("/imdb/create/:name", function (req, res) {
     idmodel.findOne({ nameStr: req.params.name }, function (err, found) {
         // console.log(found)
         if (!found) {
