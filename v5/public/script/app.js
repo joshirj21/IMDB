@@ -30,14 +30,14 @@
 //     })
 //     i++;
 // }
-var i = 0;
-var zoomimage = document.getElementsByClassName("zoomin");
-while (i < zoomimage.length) {
-    zoomimage[i].addEventListener("mouseenter", function () {
-        this.classList.add("info");
-    })
-    zoomimage[i].addEventListener("mouseleave", function () {
-        this.classList.remove("info");
-    })
-    i++;
-}
+// var i = 0;
+// var zoomimage = document.getElementsByClassName("zoomin");
+// while (i < zoomimage.length) {
+//     zoomimage[i].addEventListener("mouseenter", function () {
+//         this.classList.add("info");
+//     })
+//     zoomimage[i].addEventListener("mouseleave", function () {
+//         this.classList.remove("info");
+//     })
+//     i++;
+// }

@@ -121,7 +121,7 @@ hr.ruler {
   }
   .lower-section{
       background: #06121E;
-      height: 100px;
+      height: 700px;
   }
 
   /* .rela{
@@ -133,3 +133,27 @@ hr.ruler {
       /* -webkit-tap-highlight-color: transparent; */
       /* z-index: 999; */
   /* } */
+  .movie-1{
+      margin-top: 50px;
+      width: 730px;
+      height: 450px;
+  }
+  .movie-2{
+      width: 350px;
+      height: 215px;
+      position: relative;
+      top: -93px;
+  }
+  .movie-3{
+    width: 350px;
+    height: 215px;
+    float: right;
+    position: relative;
+    top: -215px;
+  }
+  .fas.fa-video{
+      color: #DD003F;
+  }
+  /* .news-section{
+      bac
+  } */

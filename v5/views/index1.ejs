@@ -15,10 +15,10 @@
 <div class="row mt-4">
     <% for(var i=0;i<4;i++){ %>
     <div class="oflow col-lg-3 px-3">
-        <a href="imdb/create/<%= movies.results[i].original_title %>"><img class="zoomin img-fluid rounded thumbnail"
+        <!-- <a href="imdb/create/<%= movies.results[i].original_title %>"><img class="zoomin img-fluid rounded thumbnail"
+                src="https://image.tmdb.org/t/p/w500<%= movies.results[i].poster_path %>" alt=""></a> -->
+        <a href="#"><img class="zoomin img-fluid rounded thumbnail"
                 src="https://image.tmdb.org/t/p/w500<%= movies.results[i].poster_path %>" alt=""></a>
-
-
     </div>
     <% } %>
 </div>
@@ -36,7 +36,9 @@
         <div class="row mt-5">
             <% for(var i=0;i<4;i++){ %>
             <div class="col-lg-3 px-3">
-                <a href="imdb/create/<%= imdb.results[i].original_title %>"><img class="img-fluid rounded thumbnail"
+                <!-- <a href="imdb/create/<%= movies.results[i].original_title %>"><img class="img-fluid rounded thumbnail"
+                        src="https://image.tmdb.org/t/p/w500<%= movies.results[i].poster_path %>" alt=""></a> -->
+                <a href="#"><img class="img-fluid rounded thumbnail"
                         src="https://image.tmdb.org/t/p/w500<%= movies.results[i].poster_path %>" alt=""></a>
                 <p class="pt-4"><i class="fas fa-star"></i>&nbsp&nbsp7/10</p>
                 <h5 class="movie-title"><%= movies.results[i].title %></h5>
@@ -47,7 +49,25 @@
 </div>
 <div class="lower-section">
     <div class="container">
-        <!-- News api here -->
+        <!-- Trailers -->
+        <!-- <div class=""> -->
+        <h2 class="middle-header pt-5"><i class="fas fa-video"></i> TRAILERS AND VIDEOS</h2>
+        <hr class="ruler">
+        <a href="https://youtu.be/7TavVZMewpY"><img class="movie-1 img-fluid rounded thumbnail mr-4"
+                src="https://lumiere-a.akamaihd.net/v1/images/b_thelionking2019_header_nowplaying_18094_28389be8.jpeg?region=0,0,2048,879"
+                alt=""></a>
+        <!-- frame can also be embedded -->
+        <!-- <iframe width="758" height="409" src="https://www.youtube.com/embed/7TavVZMewpY" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe> -->
+        <a href=""><img class="movie-2 img-fluid rounded thumbnail"
+                src="http://cariera.co/templates/movify/assets/images/movies/upcoming-item-1.jpg" alt=""></a>
+        <a href=""><img class="movie-3 img-fluid rounded thumbnail"
+                src="http://cariera.co/templates/movify/assets/images/movies/upcoming-item-2.jpg" alt=""></a>
     </div>
+</div>
+<!-- <div class="news-section">
+                                        news api here
+</div> -->
 </div>
 <% include ./partials/footer %>
