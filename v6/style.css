@@ -3,8 +3,11 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
-
+  box-sizing: inherit; 
+}
+html{
+font-size: 62.5%;
+}
 body {
   box-sizing: border-box; 
 }
@@ -19,15 +22,50 @@ body {
     float: left;
     overflow: hidden;
 }
-.slider-1-bg{
+.slider-bg{
     width: inherit;
     height: inherit;
-    background-image:linear-gradient(to bottom,rgba(0,0,0,0) 50%,#000 100%),url("https://i1.wp.com/demo.themeum.com/wordpress/moview/wp-content/uploads/2016/01/1-1-1.jpg?resize=400%2C650&ssl=1");
     height: inherit;
     background-size: cover;
     float: left;
     transition: all .3s;
+    position: relative;
 }
-.slider-1-bg:hover{
-    transform: scale(1.27);
+.slider-bg:hover{
+  transform: scale(1.27);    /*  Needed to implement translate on info class */
+  filter: brightness(70%);
+}
+.bg-1{
+  background-image:linear-gradient(to bottom,rgba(0,0,0,0) 50%,#000 100%),url("https://i1.wp.com/demo.themeum.com/wordpress/moview/wp-content/uploads/2016/01/1-1-1.jpg?resize=400%2C650&ssl=1");
+}
+.bg-2{
+  background-image:linear-gradient(to bottom,rgba(0,0,0,0) 50%,#000 100%),url("https://i0.wp.com/demo.themeum.com/wordpress/moview/wp-content/uploads/2016/02/2-1-1.jpg?resize=400%2C650&ssl=1");
+}
+.bg-3{
+  background-image:linear-gradient(to bottom,rgba(0,0,0,0) 50%,#000 100%),url("https://i1.wp.com/demo.themeum.com/wordpress/moview/wp-content/uploads/2016/02/3-2-1.jpg?resize=400%2C650&ssl=1");
+}
+.bg-4{
+  background-image:linear-gradient(to bottom,rgba(0,0,0,0) 50%,#000 100%),url("https://i0.wp.com/demo.themeum.com/wordpress/moview/wp-content/uploads/2016/02/4-2-1.jpg?resize=400%2C650&ssl=1");
+}
+.bg-5{
+  background-image:linear-gradient(to bottom,rgba(0,0,0,0) 50%,#000 100%),url("https://i0.wp.com/demo.themeum.com/wordpress/moview/wp-content/uploads/2016/02/5-1-1.jpg?resize=400%2C650&ssl=1");
+}
+.slider-1-info{
+  width: 18vw;
+  height: 50vh;
+  top: 55vh;
+  left: 2vw;
+  right: -10vw;
+  bottom: 0;
+  position: absolute;
+  color: white;
+  font-size: 1.5rem;
+}
+.far.fa-star{
+  color: yellow;
+  font-size: 1.5rem;
+}
+.slider-1-info-title{
+  font-size: 2.4rem;
+  font-weight: 500;
 }
