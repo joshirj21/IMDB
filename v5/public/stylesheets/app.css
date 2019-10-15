@@ -154,6 +154,21 @@ hr.ruler {
   .fas.fa-video{
       color: #DD003F;
   }
-  /* .news-section{
-      bac
-  } */
+  .news-section{
+      background: #020D18;
+      height: 700px;
+  }
+  .fas.fa-mug-hot{
+      color: #DD003F;
+  }
+  news-1{
+      width: 570px;
+      height: 300px;
+  }
+  .news-1 .img-fluid{
+    width: 555px;
+    height: 293px;
+  }
+  .news-1 p{
+      font-size: 24px;
+  }
