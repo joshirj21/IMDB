@@ -5,22 +5,159 @@
   padding: 0;
   box-sizing: inherit; 
 }
+
 html{
 font-size: 62.5%;
 }
+
 body {
   box-sizing: border-box; 
 }
+/*                   Navbar here              */
+
+.navbar-brand{
+  font-size: 2.5rem;
+}
+.fas.fa-bars{
+  font-size: 2.5rem;
+}
+.fas.fa-bars:hover{
+  text-decoration: none;
+  color: black;
+  opacity: 0.7;
+}
+.fas.fa-bars:active{
+  text-decoration: none;
+  color: black;
+  opacity: 0.7;
+}
+.fas.fa-bars:visited{
+  text-decoration: none;
+  color: black;
+}
+.search-bar{
+  width: 40vw;
+  height: 6vh;
+  margin: 0 auto;
+}
+.rounded-bar{
+  height: inherit;
+  width: 2vw;
+  border-top: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e3e3e3;
+}
+.rounded-bar-left{
+  float: left;
+  border-left: 1px solid #e3e3e3;
+  border-radius: 30px 0 0 30px;
+}
+.rectangular-bar{
+  display: block;
+  width:30vw;
+  height: inherit;
+  float: left;
+  border-top: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e3e3e3;
+}
+.rectangular-bar::before {
+  content: "";
+  display: table;
+  clear: both; 
+}
+.rounded-bar-right{
+  width: 5vw;
+  border-radius: 0  30px 30px 0 ;
+  border-right: 1px solid #e3e3e3;
+  float: left;
+}
+.search-input{
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+}
+.search-input:focus{
+  outline: none;
+  font-size: 1.5rem;
+}
+.fas.fa-search{
+  margin-left: 2vw;
+  margin-top: 1.6vh;
+  font-size: 1.7rem;
+}
+.fas.fa-search:hover{
+  text-decoration: none;
+  color: black;
+  opacity: 0.7;
+}
+.fas.fa-search:active{
+  text-decoration: none;
+  color: black;
+}
+.fas.fa-search:visited{
+  text-decoration: none;
+  color: black;
+}
+.nav-cred{
+  color: red;
+  font-size: 1.5rem;
+}
+.nav-cred:hover{
+  text-decoration: none;
+  color:red;
+  opacity: 0.7;
+}
+.nav-cred:active{
+  text-decoration: none;
+  color:red;
+}
+.nav-cred:visited{
+  text-decoration: none;
+  color:red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*                    Sliders here           */
 
 .slider{
     height: 70.08vh;
     width: 100vw;
 }
+.sliders{
+  width: 20vw;
+  height: inherit;
+  float: left;
+  overflow: hidden;
+}
 .slider-1{
-    width: 20vw;
-    height: inherit;
-    float: left;
-    overflow: hidden;
+    position: relative;
+}
+.slider-2{
+  position: relative;
+}
+.slider-3{
+  position: relative;
+}
+.slider-4{
+  position: relative;
+}
+.slider-5{
+  position: relative;
 }
 .slider-bg{
     width: inherit;
@@ -29,7 +166,6 @@ body {
     background-size: cover;
     float: left;
     transition: all .3s;
-    position: relative;
 }
 .slider-bg:hover{
   transform: scale(1.27);    /*  Needed to implement translate on info class */
@@ -45,15 +181,15 @@ body {
   background-image:linear-gradient(to bottom,rgba(0,0,0,0) 50%,#000 100%),url("https://i1.wp.com/demo.themeum.com/wordpress/moview/wp-content/uploads/2016/02/3-2-1.jpg?resize=400%2C650&ssl=1");
 }
 .bg-4{
-  background-image:linear-gradient(to bottom,rgba(0,0,0,0) 50%,#000 100%),url("https://i0.wp.com/demo.themeum.com/wordpress/moview/wp-content/uploads/2016/02/4-2-1.jpg?resize=400%2C650&ssl=1");
+  background-image:linear-gradient(to bottom,rgba(136, 69, 69, 0) 50%,#000 100%),url("https://i0.wp.com/demo.themeum.com/wordpress/moview/wp-content/uploads/2016/02/4-2-1.jpg?resize=400%2C650&ssl=1");
 }
 .bg-5{
   background-image:linear-gradient(to bottom,rgba(0,0,0,0) 50%,#000 100%),url("https://i0.wp.com/demo.themeum.com/wordpress/moview/wp-content/uploads/2016/02/5-1-1.jpg?resize=400%2C650&ssl=1");
 }
-.slider-1-info{
+.slider-info{
   width: 18vw;
   height: 50vh;
-  top: 55vh;
+  top: 45vh;
   left: 2vw;
   right: -10vw;
   bottom: 0;
@@ -65,7 +201,7 @@ body {
   color: yellow;
   font-size: 1.5rem;
 }
-.slider-1-info-title{
+.slider-info-title{
   font-size: 2.4rem;
   font-weight: 500;
 }
