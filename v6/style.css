@@ -22,21 +22,11 @@ body {
 }
 .fas.fa-bars{
   font-size: 2.5rem;
+  background: transparent;
+  border: none;
+  outline: none;
 }
-.fas.fa-bars:hover{
-  text-decoration: none;
-  color: black;
-  opacity: 0.7;
-}
-.fas.fa-bars:active{
-  text-decoration: none;
-  color: black;
-  opacity: 0.7;
-}
-.fas.fa-bars:visited{
-  text-decoration: none;
-  color: black;
-}
+
 .search-bar{
   width: 40vw;
   height: 6vh;
@@ -121,11 +111,12 @@ body {
 
 .nav-toggler{
   top: -0;
-  width: 23vw;
+  width: 0;
   position: fixed;
   height: 100vh;
   background: #F5F5F5;
   z-index: 9999;
+  overflow: hidden;
 }
 .nav-toggler-cancel{
   width: 100%;
@@ -144,8 +135,10 @@ body {
   margin: auto auto;
   color: white;
   display: inline-block;
+  background: transparent;
+  border: none;
 }
-.fas.fa-times:hover{
+/* .fas.fa-times:hover{
   text-decoration: none;
 }
 .fas.fa-times:visited{
@@ -153,7 +146,7 @@ body {
 }
 .fas.fa-times:active{
   text-decoration: none;
-}
+} */
 
 ._links{
   margin-top: 10vh;
